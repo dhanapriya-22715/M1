@@ -59,8 +59,29 @@ Write a C program to read A values and check whether A is positive number or not
 6.End the program.
 
 # PROGRAM:
+```
+#include <stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    if (a>=0)
+    {
+        printf("Number is positive.");
+    }
+    else
+    {
+        printf("Number is negative.");
+    }
+    return 0;
+}
+
+```
+
 
 # OUTPUT:
+![image](https://github.com/user-attachments/assets/2df15025-0ab7-4c10-b694-9571a9f1eb17)
+
 
 
 
@@ -93,8 +114,27 @@ Write a program to find minimum between two fraction numbers using conditional o
 7.	Print the minimum value.
 
 ## PROGRAM:
+```
+#include <stdio.h>
+int main()
+{
+    int a,b;
+    scanf("%d%d",&a,&b);
+    if (a<b)
+    {
+        printf("Minimum between %d and %d is %d",a,b,a);
+    }
+    else
+    {
+        printf("Minimum between %d and %d is %d",a,b,b);
+    }
+    return 0;
+}
+```
 
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/4f4ec7a9-b346-45e1-a3b4-515ffda0ec74)
+
 
 
 
@@ -124,8 +164,21 @@ Write a C program to check whether the input value is equal to 1 using simple if
 6.	End the program.
 
 ## PROGRAM:
+```
+#include <stdio.h>
+int main(){
+    int a;
+    scanf("%d",&a);
+    if(a==1)
+       printf("TRUE");
+       
+   
+}
 
+```
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/f19cd7ea-d847-416e-afa6-ada85f08c8ee)
+
 
 
 
@@ -160,8 +213,39 @@ c.	Else if percentage >= 36: Print “Division = Pass”
 9.	Else: Print “Division = Fail”
 10.	End
 ## PROGRAM:
+```
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    int phy,che,ca,total;
+    float per;
+    char div[10];
+
+   
+    scanf("%d%d%d",&phy,&che,&ca);
+    total = phy+che+ca;
+    per = total/3.0;
+    if (per>=60)
+	 strcpy(div,"First");
+    else if (per<60&&per>=48)
+	    strcpy(div,"Second");
+	else
+	    if (per<48&&per>=36)
+		strcpy(div,"Pass");
+	     else
+		strcpy(div,"Fail");
+
+      
+       printf("Total Marks = %d\nPercentage = %5.2f\nDivision = %s\n",total,per,div);
+       return 0;
+}
+```
 
 ## OUTPUT:
+![image](https://github.com/user-attachments/assets/f7b53a4f-5c04-44e3-b9d9-320bfff9675c)
+
 
 ## RESULT:
 The program successfully takes three subject marks, calculates the total and percentage, and correctly determines the division based on predefined grading logic.
